@@ -3,16 +3,16 @@ import backgroundImage from '../../../public/bg.jpeg';
 
 const styles = {
   pageContainer: {
-    backgroundImage: `url(${backgroundImage})`, // Usa la imagen importada como fondo
-    backgroundSize: 'cover', // Asegúrate de que la imagen cubra todo el contenedor
-    backgroundPosition: 'center', // Centra la imagen
-    height: '100vh', // Asegúrate de que cubra toda la altura de la pantalla
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   loginContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Fondo blanco semitransparente
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     padding: '20px',
     borderRadius: '8px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
