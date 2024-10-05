@@ -17,12 +17,12 @@ const Nav = () => {
           <span className="hamburger-line"></span>
         </button>
         <div className="logo">
-          <img src="/path/to/your/logo.png" alt="Aidia Logo" />
+          <img src="../../public/aidie.png" alt="Aidie Logo" />
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#who-is-aidia">Who is Aidia</a></li>
+          <li><a href="#who-is-aidia">Who is Aidie</a></li>
           <li><a href="#other">Other</a></li>
         </ul>
       </div>
