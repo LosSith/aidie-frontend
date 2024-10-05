@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
+import Logo from '../Logo/Logo';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navigation = () => {
           <span className="hamburger-line"></span>
         </button>
         <div className="logo">
-          <img src="../../../public/aidie.png" alt="Aidia Logo" />
+          <Logo />
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/">Inicio</Link></li>
