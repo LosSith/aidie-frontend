@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './register.css'; // Importamos los estilos desde el archivo CSS
-import backgroundImage from '../../../public/bg.jpeg'; // Importamos la imagen de fondo
+import './register.css';
+import backgroundImage from '../../../public/bg.jpeg';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -92,7 +92,6 @@ const Register = () => {
             </>
           )}
 
-          {/* Página 2 */}
           {step === 2 && (
             <>
               <input
