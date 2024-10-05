@@ -19,13 +19,15 @@ const Navigation = () => {
           <span className="hamburger-line"></span>
         </button>
         <div className="logo">
-          <Logo />
+          
+          <Link to="/"><Logo /></Link>
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/events">Events</Link></li>
           <li><Link to="/who-is-aidia">Who is Aidia</Link></li>
-          <li><Link to="/other">Other</Link></li>
+          <li><Link to="/register">Register</Link></li>
+          <li><Link to="/login">Login</Link></li>
         </ul>
       </div>
     </nav>

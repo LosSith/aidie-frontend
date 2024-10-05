@@ -38,6 +38,10 @@ p {
 	color: #666;
 }
 
+img.main-logo {
+	width: 100%;
+}
+
 .cta-button {
 	padding: 10px 20px;
 	font-size: 1rem;
@@ -52,8 +56,8 @@ p {
 .cta-button:hover {
 	background-color: #ff6347;
 }
-
-/* Media query for tablets */
+/* 
+ Media query for tablets 
 @media screen and (min-width: 768px) {
 	h1 {
 		font-size: 2.5rem;
@@ -66,7 +70,7 @@ p {
 	.cta-button {
 		font-size: 1.1rem;
 	}
-}
+} */
 
 /* Media query for desktops */
 @media screen and (min-width: 1024px) {
@@ -81,5 +85,9 @@ p {
 	.cta-button {
 		font-size: 1.2rem;
 		padding: 12px 24px;
+	}
+
+	img.main-logo {
+		width: 200px;
 	}
 }
