@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
-const Nav = () => {
+const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,17 +18,17 @@ const Nav = () => {
           <span className="hamburger-line"></span>
         </button>
         <div className="logo">
-          <img src="../../public/aidie.png" alt="Aidie Logo" />
+          <img src="../../../public/aidie.png" alt="Aidia Logo" />
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#who-is-aidia">Who is Aidie</a></li>
-          <li><a href="#other">Other</a></li>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/events">Events</Link></li>
+          <li><Link to="/who-is-aidia">Who is Aidia</Link></li>
+          <li><Link to="/other">Other</Link></li>
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Nav;
+export default Navigation;
