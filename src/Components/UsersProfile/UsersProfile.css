@@ -4,11 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1f2937; /* Color gris oscuro */
+    background-color: #1f2937;
 }
 
 .profile-card {
-    background-color: #a855f7;
+    background-color: #CA27C9;
     border-radius: 12px;
     padding: 24px;
     width: 100%;
@@ -18,7 +18,7 @@
 }
 
 .profile-avatar {
-    background-color: #facc15; /* Color amarillo */
+    background-color: #FFD400;
     border-radius: 50%;
     padding: 16px;
     display: inline-block;
@@ -27,7 +27,7 @@
 
 .avatar-icon {
     font-size: 40px;
-    color: #000;
+    color: #1E1E1E;
 }
 
 .profile-name {
@@ -43,7 +43,7 @@
 }
 
 .form-title {
-    color: #facc15;
+    color: #FFD400;
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 12px;
@@ -59,7 +59,7 @@
     width: 100%;
     padding: 12px;
     border-radius: 6px;
-    background-color: #06b6d4; /* Color cian */
+    background-color: #06B4CF;
     color: #fff;
     border: none;
 }
@@ -72,10 +72,9 @@
     color: #fff;
 }
 
-  /* Estilos del botón de guardar */
 .save-button {
-    background-color: #facc15; /* Color amarillo */
-    color: #000;
+    background-color: #FFD400;
+    color: #1E1E1E;
     font-weight: bold;
     padding: 12px;
     width: 100%;
@@ -86,5 +85,5 @@
 }
 
 .save-button:hover {
-    background-color: #fbbf24; /* Sombra más oscura en hover */
+    background-color: #FFD400;
 }
