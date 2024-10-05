@@ -1,3 +1,4 @@
+import Logo from "../Logo/Logo";
 import "./Home.css";
 
 const Home = () => {
@@ -5,9 +6,10 @@ const Home = () => {
 	return (
 		<div className="home">
 			<div className="home-content">
-				<h1>Welcome to the Concert</h1>
-				<p>Experience the music like never before</p>
-				<button className="cta-button">Get Tickets</button>
+				<h1>Meet Aidie</h1>
+        <Logo />
+				<p>your event assistant</p>
+				<button className="cta-button">Register and start your fun!</button>
 			</div>
 		</div>
 	);
