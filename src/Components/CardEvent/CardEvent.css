@@ -1,0 +1,94 @@
+/* Base styles for mobile */
+.card-event {
+	padding: 1rem;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 1rem;
+	background-color: #fff;
+	font-family: Arial, sans-serif;
+	max-width: 600px;
+	margin: auto;
+}
+
+.event-name {
+	font-size: 1.5rem;
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.event-description {
+	font-size: 1rem;
+	color: #555;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.event-date,
+.event-location {
+	font-size: 1rem;
+	color: #333;
+	margin-bottom: 0.5rem;
+	text-align: left;
+}
+
+.event-date span,
+.event-location span {
+	font-weight: bold;
+	color: #000;
+	margin-right: 0.25rem;
+}
+
+.buy-button,
+.tellme-button {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 1rem;
+}
+
+.buy-button {
+	background-color: #28a745;
+}
+
+.buy-button:hover {
+	background-color: #218838;
+}
+
+.tellme-button {
+	background-color: #007bff;
+}
+
+.tellme-button:hover {
+	background-color: #0069d9;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+	.card-event {
+		padding: 2rem;
+	}
+
+	.event-name {
+		font-size: 2rem;
+	}
+
+	.event-description {
+		font-size: 1.25rem;
+	}
+
+	.buy-button,
+	.tellme-button {
+		font-size: 1.25rem;
+	}
+}
