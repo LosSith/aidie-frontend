@@ -1,4 +1,3 @@
-import React from 'react';
 import './Login.css';
 import backgroundImage from '../../../public/bg.jpeg';
 
