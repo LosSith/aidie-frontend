@@ -1,0 +1,90 @@
+
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2937; /* Color gris oscuro */
+}
+
+.profile-card {
+    background-color: #a855f7;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+    background-color: #facc15; /* Color amarillo */
+    border-radius: 50%;
+    padding: 16px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.avatar-icon {
+    font-size: 40px;
+    color: #000;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f3f4f6;
+}
+
+.profile-description {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    margin-bottom: 24px;
+}
+
+.form-title {
+    color: #facc15;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #06b6d4; /* Color cian */
+    color: #fff;
+    border: none;
+}
+
+.input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+  /* Estilos del botón de guardar */
+.save-button {
+    background-color: #facc15; /* Color amarillo */
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #fbbf24; /* Sombra más oscura en hover */
+}
