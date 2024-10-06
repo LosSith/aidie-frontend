@@ -3,7 +3,7 @@ import "./App.css";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Home from "./Components/Home/Home";
-import { AppProvider } from "./Contexto/AppContext";
+
 
 function App() {
   const [isRegistered, setIsRegistered] = useState(true);

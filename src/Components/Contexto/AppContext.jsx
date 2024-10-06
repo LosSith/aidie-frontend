@@ -33,7 +33,7 @@ export const AppProvider = ({ children }) => {
     localStorage.removeItem("session");
     setToken(null);
     setUserSession({ email: "", name: "" });
-    navigate("/"); // Aquí usarás navigate pasado como argumento
+    navigate("/events"); // Aquí usarás navigate pasado como argumento
   };
 
   return (
