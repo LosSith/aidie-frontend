@@ -1,4 +1,3 @@
-// Dentro de AppContext
 import { createContext, useState, useCallback } from "react";
 import axios from "axios";
 const { VITE_SERVER_URL_LOCAL } = import.meta.env;
@@ -7,21 +6,22 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isLoggedIn, setisLoggedIn] = useState(!!localStorage.getItem("token"));
-
   const [userSession, setUserSession] = useState(
     localStorage.getItem("session")
       ? JSON.parse(localStorage.getItem("session"))
       : { email: "", name: "" }
   );
-
-  const [token, setToken] = useState(
-    localStorage.getItem("token") ? localStorage.getItem("token") : null
-  );
+  const [token, setToken] = useState(localStorage.getItem("token") || null);
 
   const logIn = async (userData) => {
     const tokenJson = await axios.post(
       `${VITE_SERVER_URL_LOCAL}/users/login`,
-      userData
+      userData,
+      {
+        headers: {
+          'Content-Type': 'application/json', // Asegurar que el backend reciba JSON
+        },
+      }
     );
     const { token } = tokenJson.data;
     return token;
@@ -33,7 +33,7 @@ export const AppProvider = ({ children }) => {
     localStorage.removeItem("session");
     setToken(null);
     setUserSession({ email: "", name: "" });
-    navigate("/events"); // Aquí usarás navigate pasado como argumento
+    navigate("/login"); // Redirigir a la página de login
   };
 
   return (

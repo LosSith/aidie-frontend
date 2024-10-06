@@ -1,27 +1,25 @@
 import "./Login.css";
 import { useState, useContext } from "react";
-import { useNavigate,Link } from "react-router-dom";
-import axios from "axios";
-import { AppContext } from "../Contexto/AppContext"; // Asegúrate de importar tu contexto correctamente
+import { useNavigate, Link } from "react-router-dom";
+import { AppContext } from "../Contexto/AppContext";
 import backgroundImage from "../../../public/bg.jpeg";
 
 const Login = () => {
   const [user, setUser] = useState({ email: "", password: "" });
   const { logIn, setUserSession, setisLoggedIn, setToken } =
     useContext(AppContext);
-  const navigate = useNavigate(); // Para redireccionar después del login
+  const navigate = useNavigate();
 
-  // Función para manejar los cambios en los inputs
   const handleUser = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
   };
 
-  // Función para manejar el envío del formulario
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+    event.preventDefault();
 
     try {
-      const token = await logIn(user); // Llamada a la función de login en el contexto
+      const token = await logIn(user);
+      console.log("Token recibido:", token); // Comprobar si recibes el token
       const tokenPayload = token.split(".")[1];
       const userSesion = JSON.parse(atob(tokenPayload));
 
@@ -43,10 +41,10 @@ const Login = () => {
       );
       setToken(token);
 
-      navigate("/Event"); // Redirigir a la página principal tras el login exitoso
+      navigate("/events"); // Redirigir a la página de eventos tras el login exitoso
     } catch (error) {
-      console.error("Login error:", error);
-      window.alert("Error al iniciar sesión. Verifique sus credenciales..");
+      console.error("Error en el login:", error);
+      window.alert("Error al iniciar sesión. Verifique sus credenciales.");
     }
   };
 
@@ -92,7 +90,7 @@ const Login = () => {
         </p>
         <p>
           ¿don't have an account?{" "}
-          <Link to="/register"></Link>
+          <Link to="/register">Create one</Link> {/* Texto corregido */}
         </p>
       </div>
     </div>
