@@ -54,9 +54,11 @@ const Login = () => {
 			style={{ backgroundImage: `url(${backgroundImage})` }}
 		>
 			<div className="login-container">
-				<h1 className="login-title">
-					Register your events and let Aidie manage your reminders!
-				</h1>
+				<h1 className="form-title-h">Login</h1>
+				<h3 className="form-subtitle">
+					Login to your account to manage your events and let Aidie manage your
+					reminders!
+				</h3>
 				<form className="form" onSubmit={handleSubmit}>
 					<label className="label">
 						<input

@@ -94,11 +94,26 @@ input {
 	margin-bottom: 15px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	background-color: orange !important;
+	background-color: #ca27c9 !important;
 	color: #fff !important;
 	font-weight: 700 !important;
 }
 input::placeholder {
 	color: #fff !important;
 	opacity: 0.8;
+}
+
+.form-title-h {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.form-subtitle {
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: #666;
+	margin-bottom: 20px;
+	text-align: center;
 }
