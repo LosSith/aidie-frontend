@@ -125,4 +125,7 @@ input::placeholder {
 .main-container {
 	display: flex;
 	justify-content: center;
+	background-color: chartreuse;
+	background: url("../public/bg.jpeg") no-repeat fixed;
+	background-size: cover;
 }

@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import "./register.css";
-import backgroundImage from "../../../public/bg.jpeg";
 import { AppContext } from "../Contexto/AppContext"; // Asegúrate de tener la ruta correcta
 import { useNavigate } from "react-router-dom"; // Importa useNavigate
 
@@ -57,10 +56,7 @@ const Register = () => {
 	};
 
 	return (
-		<div
-			className="page-container"
-			style={{ backgroundImage: `url(${backgroundImage})` }}
-		>
+		<div className="page-container">
 			<div className="form-container">
 				<h1 className="form-title-h">Register</h1>
 				<h3 className="form-subtitle">

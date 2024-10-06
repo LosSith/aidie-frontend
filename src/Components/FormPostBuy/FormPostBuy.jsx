@@ -1,5 +1,4 @@
 import "./FormPostBuy.css";
-import backgroundImage from "../../../public/bg.jpeg";
 
 const FormPostBuy = ({ eventName }) => {
 	const handleNoClick = () => {
@@ -11,14 +10,7 @@ const FormPostBuy = ({ eventName }) => {
 	};
 
 	return (
-		<div
-			className="post-buy-container"
-			style={{
-				backgroundImage: `url(${backgroundImage})`,
-				backgroundSize: "cover",
-				backgroundPosition: "center",
-			}}
-		>
+		<div className="post-buy-container">
 			<div className="post-buy-card">
 				<p className="post-buy-message">
 					We realized you clicked <span className="highlight">BUY</span> for the

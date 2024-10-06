@@ -2,7 +2,6 @@ import "./Login.css";
 import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AppContext } from "../Contexto/AppContext";
-import backgroundImage from "../../../public/bg.jpeg";
 
 const Login = () => {
 	const [user, setUser] = useState({ email: "", password: "" });
@@ -49,10 +48,7 @@ const Login = () => {
 	};
 
 	return (
-		<div
-			className="page-container"
-			style={{ backgroundImage: `url(${backgroundImage})` }}
-		>
+		<div className="page-container">
 			<div className="login-container">
 				<h1 className="form-title-h">Login</h1>
 				<h3 className="form-subtitle">
