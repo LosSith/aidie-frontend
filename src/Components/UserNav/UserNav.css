@@ -1,0 +1,22 @@
+.user-nav {
+	background-color: #cb27ca;
+}
+
+svg.user-icon {
+	width: 25px;
+	height: 25px;
+	margin: 10px;
+	color: #1a1a1a;
+}
+
+svg.user-icon.selected {
+	color: yellow;
+}
+
+@media (max-width: 400px) {
+	svg.user-icon {
+		width: 20px;
+		height: 20px;
+		margin: 4px;
+	}
+}

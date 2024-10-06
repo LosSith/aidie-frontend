@@ -13,6 +13,8 @@ import UserProfile from "./Components/UsersProfile/UsersProfile";
 import FormPostBuy from "./Components/FormPostBuy/FormPostBuy";
 import FormPostBuy2 from "./Components/FormPostBuy/FormPostBuy2";
 import FormPostBuy3 from "./Components/FormPostBuy/FormPostBuy3";
+import Favorites from "./Components/Favorites/Favorites";
+import MyEvents from "./Components/MyEvents/MyEvents";
 console.log("main.jsx is running");
 
 const router = createBrowserRouter([
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
 			{
 				path: "post-buy3",
 				element: <FormPostBuy3 />,
+			},
+			{
+				path: "favorites",
+				element: <Favorites />,
+			},
+			{
+				path: "my-events",
+				element: <MyEvents />,
 			},
 		],
 	},

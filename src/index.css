@@ -118,3 +118,11 @@ input::placeholder {
 	margin-bottom: 20px;
 	text-align: center;
 }
+.main-layout {
+	height: 100vh;
+	width: 100%;
+}
+.main-container {
+	display: flex;
+	justify-content: center;
+}

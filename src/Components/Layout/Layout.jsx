@@ -12,7 +12,9 @@ const Layout = () => {
 			{isLoggedIn ? <UserNav /> : <Nav />}{" "}
 			{/* Mostrar Nav2 si está logueado, sino Nav1 */}
 			<main className="main-layout">
-				<Outlet />
+				<div className="main-container">
+					<Outlet />
+				</div>
 			</main>
 		</>
 	);

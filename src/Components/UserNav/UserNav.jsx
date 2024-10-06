@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import LogoutButton from "../LogOut/LogOut";
 import "./UserNav.css";
 import "../Nav/Nav.css";
-import { FaBell, FaRegStar, FaRegCalendar, FaUserCircle } from "react-icons/fa";
+import { FaBell, FaStar, FaRegCalendar, FaUserCircle } from "react-icons/fa";
 
 const NavigationHome = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const NavigationHome = () => {
 	};
 
 	return (
-		<nav className="navigation">
+		<nav className="navigation user-nav">
 			<div className="nav-container">
 				<button className="hamburger" onClick={toggleMenu}>
 					<span className="hamburger-line"></span>
@@ -33,13 +33,13 @@ const NavigationHome = () => {
 				</ul>
 				<LogoutButton />
 				<div className="user-buttons">
-					<Link to="/">
-						<FaBell className="user-icon user-notification" />
+					<Link to="/post-buy">
+						<FaBell className="user-icon user-notification selected" />
 					</Link>
 					<Link to="/favorites">
-						<FaRegStar className="user-icon user-favorites" />
+						<FaStar className="user-icon user-favorites" />
 					</Link>
-					<Link to="/">
+					<Link to="/my-events">
 						<FaRegCalendar className="user-icon user-calendar" />
 					</Link>
 					<Link to="/profile">
