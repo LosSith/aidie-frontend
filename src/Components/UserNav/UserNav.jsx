@@ -36,12 +36,12 @@ const NavigationHome = () => {
 					<Link to="/post-buy">
 						<FaBell className="user-icon user-notification selected" />
 					</Link>
-					<Link to="/favorites">
+					<Link to="/events">
 						<FaStar className="user-icon user-favorites" />
 					</Link>
-					<Link to="/my-events">
+					{/* 	<Link to="/my-events">
 						<FaRegCalendar className="user-icon user-calendar" />
-					</Link>
+					</Link> */}
 					<Link to="/profile">
 						<FaUserCircle className="user-icon user-profile" />
 					</Link>

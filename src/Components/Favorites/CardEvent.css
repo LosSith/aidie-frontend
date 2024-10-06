@@ -1,0 +1,130 @@
+/* Base styles for mobile */
+.card-event {
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 1rem;
+	background-color: #cb27ca;
+	max-width: 600px;
+	margin: 20px;
+}
+
+.event-info {
+	position: absolute;
+	bottom: 6px;
+	left: 0;
+	background-color: #00000050;
+	width: 100%;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	padding: inherit;
+}
+
+.event-name-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 0 16px;
+	color: #fff;
+}
+
+.event-description {
+	font-size: 1rem;
+	color: #fff;
+	margin: 0 16px;
+}
+
+.event-date,
+.event-location {
+	font-size: 1rem;
+	color: #333;
+	margin-bottom: 0.5rem;
+	text-align: left;
+}
+
+.event-date span,
+.event-location span {
+	font-weight: bold;
+	color: #000;
+	margin-right: 0.25rem;
+}
+
+.buy-button,
+.tellme-button {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 1rem;
+}
+
+.button-event {
+	background-color: #06b4cf;
+}
+
+.button-event:hover {
+	background-color: #00a3bc;
+}
+
+img.event-image {
+	max-width: 100%;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+	.card-event {
+		padding: 2rem;
+	}
+
+	.event-name {
+		font-size: 2rem;
+	}
+
+	.event-description {
+		font-size: 1.25rem;
+	}
+
+	.buy-button,
+	.tellme-button {
+		font-size: 1.25rem;
+	}
+}
+
+.container-event-image {
+	position: relative;
+}
+
+.star-icon {
+	font-size: 1.5rem;
+	color: #ffd700;
+	width: 30px;
+	height: 30px;
+	z-index: 1;
+}
+
+.event-favorite {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+input#favorite {
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: 3;
+	right: 0;
+	opacity: 0.01;
+}
