@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaPencilAlt } from 'react-icons/fa';
+import { FaPencilAlt} from 'react-icons/fa';
+import { IoMdPerson } from "react-icons/io";
 import './UsersProfile.css';
 
 const UsersProfile = () => {
@@ -28,7 +29,7 @@ return (
     <div className="profile-container">
     <div className="profile-card">
         <div className="profile-avatar">
-        <FaPencilAlt className="avatar-icon" />
+        <IoMdPerson className="avatar-icon" />
         </div>
         <h1 className="profile-name">Cosme Fulanito</h1>
         <p className="profile-description">

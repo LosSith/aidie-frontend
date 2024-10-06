@@ -49,7 +49,7 @@ const CardEvent = () => {
 					)}
 				</div>
 				<div className="event-info">
-					<h3 className="event-name">{event.name}</h3>
+					<h3 className="event-name-title">{event.name}</h3>
 					<p className="event-description">{event.description}</p>
 				</div>
 			</div>
