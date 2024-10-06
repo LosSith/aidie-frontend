@@ -8,40 +8,42 @@ import Layout from "./Components/Layout/Layout";
 import Events from "./Components/Events/Events";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
-
+import { AppProvider } from "../src/Components/Contexto/AppContext";
 console.log("main.jsx is running");
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Layout />,
-		children: [
-			{
-				index: true,
-				element: <Home />,
-			},
-			{
-				path: "events",
-				element: <Events />
-			},
-			{
-				path: "who-is-aidia",
-				element: <WhoIsAidia />,
-			},
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
       {
-				path: "register",
-				element: <Register />,
-			},
+        index: true,
+        element: <Home />,
+      },
       {
-				path: "login",
-				element: <Login />,
-			},
-		],
-	},
+        path: "events",
+        element: <Events />,
+      },
+      {
+        path: "who-is-aidia",
+        element: <WhoIsAidia />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+    ],
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  </React.StrictMode>
+);
