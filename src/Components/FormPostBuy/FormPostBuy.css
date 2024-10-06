@@ -1,0 +1,78 @@
+
+.post-buy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/path/to/your/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.post-buy-card {
+    background-color: #06B4CF;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.post-buy-message {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.highlight {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+.event-name {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.question {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 48%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-no {
+    background-color: #CA27C9;
+    color: #fff;
+}
+
+.btn-no:hover {
+    background-color: #cf15cf;
+}
+
+.btn-yes {
+    background-color: #FFD400;
+    color: #000;
+}
+
+.btn-yes:hover {
+    background-color: #f7b205;
+}
