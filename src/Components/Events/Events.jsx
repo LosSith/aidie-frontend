@@ -1,33 +1,26 @@
-import { useEffect, useContext, useState } from 'react';
-import { AppContext } from '../Contexto/AppContext';
-import CardEvent from '../CardEvent/CardEvent';
+import { useEffect, useContext, useState } from "react";
+import { AppContext } from "../Contexto/AppContext";
+import CardEvent from "../CardEvent/CardEvent";
 
 const Events = () => {
-	const { seeEvents, events, seeInterestedEvents, interestedEvents } =
-		useContext(AppContext);
+	const { seeEvents, events } = useContext(AppContext);
 	const [tokens, setTokens] = useState(
-		localStorage.getItem('token') ? localStorage.getItem('token') : null
+		localStorage.getItem("token") ? localStorage.getItem("token") : null
 	);
 
 	useEffect(() => {
 		if (tokens) {
-			seeEvents();
-			seeInterestedEvents();
+			seeEvents(); // Llama a la función para obtener eventos si el token está presente
 		} else {
-			console.error('No se encontró el token de autenticación.');
+			console.error("No se encontró el token de autenticación.");
 		}
-	}, [seeEvents, seeInterestedEvents, tokens]);
+	}, [seeEvents, tokens]);
 
 	return (
 		<div>
 			<h2>Eventos</h2>
 			{events.length > 0 ? (
-				events.map((event) => (
-					<CardEvent
-						key={events.id}
-						event={event}
-					/>
-				))
+				events.map( event => <CardEvent key={events.id} event={event} />)
 			) : (
 				<p>No hay eventos disponibles.</p>
 			)}

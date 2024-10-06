@@ -49,7 +49,7 @@ export const AppProvider = ({ children }) => {
 
 	const seeEvents = useCallback(async () => {
 		try {
-			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/user/id`, {
+			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
