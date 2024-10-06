@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Nav.css';
 import Logo from '../Logo/Logo';
 
-const Navigation = () => {
+const NavigationHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -23,15 +23,13 @@ const Navigation = () => {
           <Link to="/"><Logo /></Link>
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/">Inicio</Link></li>
-
-          <li><Link to="/who-is-aidia">Who is Aidia</Link></li>
-          <li><Link to="/register">Register</Link></li>
-          <li><Link to="/login">Login</Link></li>
+          
+          <li><Link to="/events">Events</Link></li>
+ 
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Navigation;
+export default NavigationHome;
