@@ -13,6 +13,7 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
 }
 
 a {
@@ -74,14 +75,30 @@ button:focus-visible {
 	padding: 10px 20px;
 	font-size: 1rem;
 	background-color: #06b4cf;
-	color: #fff;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	color: #fff !important;
+	font-weight: 700 !important;
+	letter-spacing: 1px;
 }
 
 .principal-button:hover {
 	background-color: #06889c;
 	color: #fff !important;
+}
+
+input {
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: orange !important;
+	color: #fff !important;
+	font-weight: 700 !important;
+}
+input::placeholder {
+	color: #fff !important;
+	opacity: 0.8;
 }
