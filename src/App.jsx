@@ -3,21 +3,21 @@ import "./App.css";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Home from "./Components/Home/Home";
-
+import "App.css";
 
 function App() {
-  const [isRegistered, setIsRegistered] = useState(true);
+	const [isRegistered, setIsRegistered] = useState(true);
 
-  const handleRegister = () => {
-    setIsRegistered(true);
-  };
+	const handleRegister = () => {
+		setIsRegistered(true);
+	};
 
-  return (
-    <div className="App">
-      {isRegistered ? <Login /> : <Register onRegister={handleRegister} />}
-      <Home />
-    </div>
-  );
+	return (
+		<div className="App">
+			{isRegistered ? <Login /> : <Register onRegister={handleRegister} />}
+			<Home />
+		</div>
+	);
 }
 
 export default App;

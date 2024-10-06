@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Nav.css';
-import Logo from '../Logo/Logo';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Nav.css";
+import Logo from "../Logo/Logo";
+import LogoutButton from "../LogOut/LogOut";
 
 const NavigationHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,14 +20,16 @@ const NavigationHome = () => {
           <span className="hamburger-line"></span>
         </button>
         <div className="logo">
-          
-          <Link to="/"><Logo /></Link>
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          
-          <li><Link to="/events">Events</Link></li>
- 
+        <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
+          <li>
+            <Link to="/events">Events</Link>
+          </li>
         </ul>
+        <LogoutButton />
       </div>
     </nav>
   );

@@ -1,29 +1,43 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 /* Base styles for mobile */
 .card-event {
 	padding: 1rem;
-	border: 1px solid #ddd;
 	border-radius: 8px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	margin: 1rem;
-	background-color: #fff;
-	font-family: Arial, sans-serif;
+	background-color: #cb27ca;
 	max-width: 600px;
-	margin: auto;
+	margin: 20px;
 }
 
-.event-name {
+.event-info {
+	position: absolute;
+	bottom: 6px;
+	left: 0;
+	background-color: #00000050;
+	width: 100%;
+	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	padding: inherit;
+}
+
+.event-name-title {
 	font-size: 1.5rem;
-	color: #333;
 	font-weight: bold;
-	margin-bottom: 0.5rem;
-	text-align: center;
+	margin: 0 16px;
+	color: #fff;
 }
 
 .event-description {
 	font-size: 1rem;
-	color: #555;
-	margin-bottom: 1rem;
-	text-align: center;
+	color: #fff;
+	margin: 0 16px;
 }
 
 .event-date,
@@ -57,20 +71,16 @@
 	margin-top: 1rem;
 }
 
-.buy-button {
-	background-color: #28a745;
+.button-event {
+	background-color: #06b4cf;
 }
 
-.buy-button:hover {
-	background-color: #218838;
+.button-event:hover {
+	background-color: #00a3bc;
 }
 
-.tellme-button {
-	background-color: #007bff;
-}
-
-.tellme-button:hover {
-	background-color: #0069d9;
+img.event-image {
+	max-width: 100%;
 }
 
 /* Tablet and larger screens */
@@ -93,6 +103,10 @@
 	}
 }
 
+.container-event-image {
+	position: relative;
+}
+
 .star-icon {
 	font-size: 1.5rem;
 	color: #ffd700;
@@ -105,7 +119,9 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
-	position: relative;
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
 input#favorite {
