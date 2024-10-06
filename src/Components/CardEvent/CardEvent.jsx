@@ -14,12 +14,29 @@ const event = {
 		"Live concert featuring an energetic performance by The Rockers.",
 	hour: "20:00 hrs",
 	saleStatus: 1,
+	userFavorite: false,
+};
+
+const handleFavoriteChange = () => {
+	console.log("Favorite changed");
+	event.userFavorite = !event.userFavorite;
+	console.log(event.userFavorite);
 };
 
 const CardEvent = () => {
 	return (
 		<article className="card-event">
 			<img src={event.imageUrl} alt={event.name} className="event-image" />
+			<div className="event-favorite">
+				<input
+					type="checkbox"
+					id="favorite"
+					name="favorite"
+					checked={event.userFavorite}
+					onChange={handleFavoriteChange}
+				/>
+				<label htmlFor="favorite">Favorite</label>
+			</div>
 			<h3 className="event-name">{event.name}</h3>
 			<p className="event-description">{event.description}</p>
 			<p className="event-date">
