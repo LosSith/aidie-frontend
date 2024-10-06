@@ -1,7 +1,6 @@
 // Dentro de AppContext
 import { createContext, useState, useCallback } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 const { VITE_SERVER_URL_LOCAL } = import.meta.env;
 
 export const AppContext = createContext();
@@ -20,6 +19,7 @@ export const AppProvider = ({ children }) => {
 	);
 
 	const [events, setEvents] = useState([]);
+	const [interestedEvents, setInterestedEvents] = useState([]);
 
 	const logIn = async (userData) => {
 		const tokenJson = await axios.post(
@@ -48,20 +48,6 @@ export const AppProvider = ({ children }) => {
 		setUserSession({ email: "", nombre: "" });
 	};
 
-	/* 	const seeEvents = useCallback(async () => {
-		try {
-			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events`, {
-				headers: {
-					Authorization: `Bearer ${token}`,
-				},
-			});
-			return response.data;
-		} catch (error) {
-			console.error("Error fetching seeEvents:", error);
-			throw error;
-		}
-	}, [token]);
- */
 	const seeEvents = useCallback(async () => {
 		try {
 			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events`, {
@@ -71,6 +57,20 @@ export const AppProvider = ({ children }) => {
 			});
 			setEvents(response.data); // Almacena los eventos en el estado
 			console.log("Eventos recibidos:", response.data); // Muestra los eventos en la consola
+		} catch (error) {
+			console.error("Error fetching seeEvents:", error);
+		}
+	}, [token]);
+
+	const seeInterestedEvents = useCallback(async () => {
+		try {
+			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events/like`, {
+				headers: {
+					Authorization: `Bearer ${token}`, // Asegúrate de que el token se esté enviando
+				},
+			});
+			setInterestedEvents(response.data); // Almacena los eventos en el estado
+			console.log("Eventos interesados recibidos:", response.data); // Muestra los eventos en la consola
 		} catch (error) {
 			console.error("Error fetching seeEvents:", error);
 		}
@@ -89,6 +89,7 @@ export const AppProvider = ({ children }) => {
 				handleRegisterSubmit,
 				seeEvents,
 				events,
+				seeInterestedEvents
 			}}
 		>
 			{children}

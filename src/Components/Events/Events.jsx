@@ -1,10 +1,9 @@
-import React, { useEffect, useContext, useState } from "react";
+import { useEffect, useContext, useState } from "react";
 import { AppContext } from "../Contexto/AppContext";
 import CardEvent from "../CardEvent/CardEvent";
 
 const Events = () => {
-	const { seeEvents, events, token } = useContext(AppContext);
-
+	const { seeEvents, events } = useContext(AppContext);
 	const [tokens, setTokens] = useState(
 		localStorage.getItem("token") ? localStorage.getItem("token") : null
 	);
@@ -21,7 +20,7 @@ const Events = () => {
 		<div>
 			<h2>Eventos</h2>
 			{events.length > 0 ? (
-				events.map((event) => <CardEvent key={event.id} event={event} />)
+				events.map( event => <CardEvent key={events.id} event={event} />)
 			) : (
 				<p>No hay eventos disponibles.</p>
 			)}

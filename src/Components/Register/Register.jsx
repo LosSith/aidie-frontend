@@ -8,11 +8,11 @@ const Register = () => {
   const { handleRegisterSubmit } = useContext(AppContext); // Extraemos la función del contexto
   const [formData, setFormData] = useState({
     name: '',
-    lastName: '',
+    lastname: '',
     email: '',
-    birthDate: '',
+    birthdate: '',
     password: '',
-    repeatPassword: '', // Asegúrate de validar que las contraseñas coincidan
+    repeatpassword: '', // Asegúrate de validar que las contraseñas coincidan
     address: '',
     region: '',
     commune: '',
@@ -34,7 +34,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.password !== formData.repeatPassword) {
+    if (formData.password !== formData.repeatpassword) {
       alert("Passwords do not match");
       return;
     }
@@ -75,8 +75,8 @@ const Register = () => {
               <input
                 className="input"
                 type="text"
-                name="lastName"
-                value={formData.lastName}
+                name="lastname"
+                value={formData.lastname}
                 onChange={handleChange}
                 placeholder="Last Name"
               />
@@ -96,11 +96,13 @@ const Register = () => {
                 onChange={handleChange}
                 placeholder="Password"
               />
+             
+              
               <input
                 className="input"
                 type="password"
-                name="repeatPassword"
-                value={formData.repeatPassword}
+                name="repeatpassword"
+                value={formData.repeatpassword}
                 onChange={handleChange}
                 placeholder="Repeat Password"
               />
@@ -115,8 +117,8 @@ const Register = () => {
               <input
                 className="input"
                 type="date"
-                name="birthDate"
-                value={formData.birthDate}
+                name="birthdate"
+                value={formData.birthdate}
                 onChange={handleChange}
                 placeholder="Birth Date"
               />
