@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Lato, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -11,6 +13,7 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
 }
 
 a {
@@ -71,14 +74,31 @@ button:focus-visible {
 .principal-button {
 	padding: 10px 20px;
 	font-size: 1rem;
-	background-color: #ff4500;
-	color: white;
+	background-color: #06b4cf;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	color: #fff !important;
+	font-weight: 700 !important;
+	letter-spacing: 1px;
 }
 
 .principal-button:hover {
-	background-color: #ff6347;
+	background-color: #06889c;
+	color: #fff !important;
+}
+
+input {
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: orange !important;
+	color: #fff !important;
+	font-weight: 700 !important;
+}
+input::placeholder {
+	color: #fff !important;
+	opacity: 0.8;
 }
