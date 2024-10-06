@@ -3,11 +3,11 @@ import backgroundImage from '../../../public/bg.jpeg';
 
 const FormPostBuy2 = ({ eventName }) => {
 const handleNoClick = () => {
-    console.log("User clicked "I'M TALKING PUBLIC LOCOMOTION'");
+    console.log("User clicked `I'M TALKING PUBLIC LOCOMOTION`");
 };
 
 const handleYesClick = () => {
-    console.log("User clicked "I'M DRIVING");
+    console.log("User clicked `I'M DRIVING`");
 };
 
 return (
@@ -19,8 +19,8 @@ return (
         </p>
         <p className="question">How are you going to the event?</p>
         <div className="button-group">
-        <button className="btn btn-no" onClick={handleNoClick}>I'M TALKING PUBLIC LOCOMOTION</button>
-        <button className="btn btn-yes" onClick={handleYesClick}>I'M DRIVING</button>
+        <button className="btn btn-no" onClick={handleNoClick}>`I'M TALKING PUBLIC LOCOMOTION`</button>
+        <button className="btn btn-yes" onClick={handleYesClick}>`I'M DRIVING`</button>
         </div>
     </div>
     </div>
