@@ -15,12 +15,12 @@ return (
     backgroundPosition: 'center' }}>
     <div className="post-buy-card">
         <p className="post-buy-message">
-        We realized you clicked <span className="highlight">BUY</span> for the event <span className="event-name">{eventName}</span>
+        We realized you clicked <span style={{ color: '#CA27C9' }}>BUY</span>for the event <span className="event-name">{eventName}</span>
         </p>
         <p className="question">How are you going to the event?</p>
         <div className="button-group">
-        <button className="btn btn-no" onClick={handleNoClick}>`I'M TALKING PUBLIC LOCOMOTION`</button>
-        <button className="btn btn-yes" onClick={handleYesClick}>`I'M DRIVING`</button>
+        <button className="btn btn-no" onClick={handleNoClick}>I'M TALKING PUBLIC LOCOMOTION</button>
+        <button className="btn btn-yes" onClick={handleYesClick}>I'M DRIVING</button>
         </div>
     </div>
     </div>
