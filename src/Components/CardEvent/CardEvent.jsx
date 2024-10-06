@@ -11,7 +11,7 @@ const event = {
 	location: "Los Angeles, CA, USA",
 	preSaleDate: "2024-10-01",
 	generalSaleDate: "2024-10-15",
-	imageUrl: "https://example.com/image1.jpg",
+	imageUrl: "../../../public/concert.jpg",
 	idArtist: "A101",
 	description:
 		"Live concert featuring an energetic performance by The Rockers.",
@@ -31,24 +31,29 @@ const CardEvent = () => {
 
 	return (
 		<article className="card-event">
-			<img src={event.imageUrl} alt={event.name} className="event-image" />
-			<div className="event-favorite">
-				<input
-					type="checkbox"
-					id="favorite"
-					name="favorite"
-					checked={event.userFavorite}
-					onChange={handleFavoriteChange}
-				/>
-				{event.userFavorite ? (
-					<FaStar className="star-icon" htmlFor="favorite" />
-				) : (
-					<FaRegStar className="star-icon" htmlFor="favorite" />
-				)}
+			<div className="container-event-image">
+				<img src={event.imageUrl} alt={event.name} className="event-image" />
+
+				<div className="event-favorite">
+					<input
+						type="checkbox"
+						id="favorite"
+						name="favorite"
+						checked={event.userFavorite}
+						onChange={handleFavoriteChange}
+					/>
+					{event.userFavorite ? (
+						<FaStar className="star-icon" htmlFor="favorite" />
+					) : (
+						<FaRegStar className="star-icon" htmlFor="favorite" />
+					)}
+				</div>
+				<div className="event-info">
+					<h3 className="event-name">{event.name}</h3>
+					<p className="event-description">{event.description}</p>
+				</div>
 			</div>
 			<div>
-				<h3 className="event-name">{event.name}</h3>
-				<p className="event-description">{event.description}</p>
 				<p className="event-date">
 					<span>When?</span>
 					{event.date}
@@ -63,11 +68,11 @@ const CardEvent = () => {
 				</p>
 
 				{event.saleStatus === 1 && (
-					<button className="buy-button">Buy tickets!</button>
+					<button className="buy-button button-event">Buy tickets!</button>
 				)}
 
 				{event.saleStatus === 2 && (
-					<button className="tellme-button">
+					<button className="tellme-button button-event">
 						Let me know when the sale starts!
 					</button>
 				)}
