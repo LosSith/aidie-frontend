@@ -46,15 +46,15 @@ const router = createBrowserRouter([
 				element: <UserProfile />,
 			},
 			{
-				path: "post.buy",
+				path: "post-buy",
 				element: <FormPostBuy />,
 			},
 			{
-				path: "post.buy2",
+				path: "post-buy2",
 				element: <FormPostBuy2 />,
 			},
 			{
-				path: "post.buy3",
+				path: "post-buy3",
 				element: <FormPostBuy3 />,
 			},
 		],

@@ -1,10 +1,19 @@
 //import Logo from "../Logo/Logo";
 import "./Home.css";
+import backgroundImage from "../../../public/bg.jpeg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 	console.log("Home component rendered");
 	return (
-		<div className="home">
+		<div
+			className="home"
+			style={{
+				backgroundImage: `url(${backgroundImage})`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+			}}
+		>
 			<div className="home-content">
 				<h1>Meet Aidie</h1>
 				<img
@@ -13,7 +22,9 @@ const Home = () => {
 					alt="Aidie Logo"
 				/>
 				<p>your event assistant</p>
-				<button className="cta-button">Register and start your fun!</button>
+				<Link to="/register" className="principal-button">
+					Register and start your fun!
+				</Link>
 			</div>
 		</div>
 	);
