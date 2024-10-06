@@ -13,68 +13,68 @@ import UserProfile from "./Components/UsersProfile/UsersProfile";
 import FormPostBuy from "./Components/FormPostBuy/FormPostBuy";
 import FormPostBuy2 from "./Components/FormPostBuy/FormPostBuy2";
 import FormPostBuy3 from "./Components/FormPostBuy/FormPostBuy3";
-import Favorites from "./Components/Favorites/Favorites";
 import MyEvents from "./Components/MyEvents/MyEvents";
+import FavoritEvents from "./Components/Favorites/Favorite";
 console.log("main.jsx is running");
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Layout />,
-		children: [
-			{
-				index: true,
-				element: <Home />,
-			},
-			{
-				path: "events",
-				element: <Events />,
-			},
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "events",
+        element: <Events />,
+      },
+      {
+        path: "favorites",
+        element: <FavoritEvents />,
+      },
 
-			{
-				path: "who-is-aidie",
-				element: <WhoIsAidie />,
-			},
-			{
-				path: "register",
-				element: <Register />,
-			},
-			{
-				path: "login",
-				element: <Login />,
-			},
-			{
-				path: "profile",
-				element: <UserProfile />,
-			},
-			{
-				path: "post-buy",
-				element: <FormPostBuy />,
-			},
-			{
-				path: "post-buy2",
-				element: <FormPostBuy2 />,
-			},
-			{
-				path: "post-buy3",
-				element: <FormPostBuy3 />,
-			},
-			{
-				path: "favorites",
-				element: <Favorites />,
-			},
-			{
-				path: "my-events",
-				element: <MyEvents />,
-			},
-		],
-	},
+      {
+        path: "who-is-aidie",
+        element: <WhoIsAidie />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "profile",
+        element: <UserProfile />,
+      },
+      {
+        path: "post-buy",
+        element: <FormPostBuy />,
+      },
+      {
+        path: "post-buy2",
+        element: <FormPostBuy2 />,
+      },
+      {
+        path: "post-buy3",
+        element: <FormPostBuy3 />,
+      },
+      {
+        path: "my-events",
+        element: <MyEvents />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<AppProvider>
-			<RouterProvider router={router} />
-		</AppProvider>
-	</React.StrictMode>
+  <React.StrictMode>
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  </React.StrictMode>
 );
