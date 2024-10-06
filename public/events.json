@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "date": "2024-11-15",
+    "location": "Los Angeles, CA, USA",
+    "preSaleDate": "2024-10-01",
+    "generalSaleDate": "2024-10-15",
+    "imageUrl": "https://example.com/image1.jpg",
+    "id_artist": "A101",
+    "description": "Live concert featuring an energetic performance by The Rockers."
+  },
+  {
+    "id": "2",
+    "date": "2025-01-20",
+    "location": "London, UK",
+    "preSaleDate": "2024-12-05",
+    "generalSaleDate": "2024-12-15",
+    "imageUrl": "https://example.com/image2.jpg",
+    "id_artist": "A102",
+    "description": "Experience a mesmerizing night with the classical tunes of Symphony Stars."
+  },
+  {
+    "id": "3",
+    "date": "2024-12-10",
+    "location": "Tokyo, Japan",
+    "preSaleDate": "2024-11-01",
+    "generalSaleDate": "2024-11-10",
+    "imageUrl": "https://example.com/image3.jpg",
+    "id_artist": "A103",
+    "description": "The world tour continues with DJ Thunder in an electrifying event."
+  },
+  {
+    "id": "4",
+    "date": "2025-03-05",
+    "location": "Sydney, Australia",
+    "preSaleDate": "2025-01-15",
+    "generalSaleDate": "2025-01-25",
+    "imageUrl": "https://example.com/image4.jpg",
+    "id_artist": "A104",
+    "description": "Join the fun with the Pop Divas in their colorful and high-energy show."
+  },
+  {
+    "id": "5",
+    "date": "2024-10-25",
+    "location": "Paris, France",
+    "preSaleDate": "2024-09-10",
+    "generalSaleDate": "2024-09-20",
+    "imageUrl": "https://example.com/image5.jpg",
+    "id_artist": "A105",
+    "description": "A romantic evening with the smooth jazz melodies of Evening Breeze."
+  },
+  {
+    "id": "6",
+    "date": "2025-02-14",
+    "location": "Berlin, Germany",
+    "preSaleDate": "2025-01-01",
+    "generalSaleDate": "2025-01-10",
+    "imageUrl": "https://example.com/image6.jpg",
+    "id_artist": "A106",
+    "description": "Celebrate Valentine's Day with a special acoustic night by The Balladeers."
+  },
+  {
+    "id": "7",
+    "date": "2024-12-31",
+    "location": "New York, NY, USA",
+    "preSaleDate": "2024-11-15",
+    "generalSaleDate": "2024-11-25",
+    "imageUrl": "https://example.com/image7.jpg",
+    "id_artist": "A107",
+    "description": "Ring in the New Year with a spectacular performance by ElectroBeats."
+  },
+  {
+    "id": "8",
+    "date": "2025-04-10",
+    "location": "Rio de Janeiro, Brazil",
+    "preSaleDate": "2025-02-20",
+    "generalSaleDate": "2025-03-01",
+    "imageUrl": "https://example.com/image8.jpg",
+    "id_artist": "A108",
+    "description": "Feel the rhythm of the carnival with Samba Kings in this lively outdoor event."
+  },
+  {
+    "id": "9",
+    "date": "2024-11-05",
+    "location": "Toronto, Canada",
+    "preSaleDate": "2024-09-25",
+    "generalSaleDate": "2024-10-05",
+    "imageUrl": "https://example.com/image9.jpg",
+    "id_artist": "A109",
+    "description": "An intimate concert featuring singer-songwriter Anna Blue and her band."
+  },
+  {
+    "id": "10",
+    "date": "2025-05-15",
+    "location": "Cape Town, South Africa",
+    "preSaleDate": "2025-03-10",
+    "generalSaleDate": "2025-03-20",
+    "imageUrl": "https://example.com/image10.jpg",
+    "id_artist": "A110",
+    "description": "Get ready for a night of reggae beats with The Sunshine Reggae Crew."
+  }
+]

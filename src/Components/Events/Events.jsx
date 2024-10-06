@@ -1,8 +1,11 @@
+import CardEvent from "../CardEvent/CardEvent";
 
 const Events = () => {
-  return (
-    <div>Events</div>
-  )
-}
+	return (
+		<>
+			<CardEvent />
+		</>
+	);
+};
 
-export default Events
+export default Events;
