@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./FormPostBuy.css";
 
 const FormPostBuy = ({ eventName }) => {
@@ -21,9 +22,10 @@ const FormPostBuy = ({ eventName }) => {
 					<button className="btn btn-no" onClick={handleNoClick}>
 						NO
 					</button>
-					<button className="btn btn-yes" onClick={handleYesClick}>
+
+					<Link to="/post-buy2" className="btn secondary-button">
 						YES
-					</button>
+					</Link>
 				</div>
 			</div>
 		</div>

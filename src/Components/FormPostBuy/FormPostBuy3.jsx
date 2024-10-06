@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
 import "./FormPostBuy.css";
 
 const FormPostBuy3 = () => {
-	const handleButtonClick = () => {
+	/* 	const handleButtonClick = () => {
 		console.log("User clicked 'TAKE ME HOME'");
-	};
+	}; */
 
 	return (
 		<div className="post-buy-container">
 			<div
 				className="post-buy-card"
 				style={{
-					backgroundColor: "#007bff",
+					backgroundColor: "#2d0c38",
 					padding: "20px",
 					borderRadius: "10px",
 				}}
@@ -25,30 +26,21 @@ const FormPostBuy3 = () => {
 				>
 					If you don't know{" "}
 					<span style={{ color: "#CA27C9" }}>where to park</span>, we recommend
-					you to use <span style={{ color: "#1E1E1E" }}>this app</span> and
-					<span style={{ color: "#CA27C9" }}>rent one parking lot</span> near
+					you to use <span style={{ color: "yellow" }}>this app</span> and
+					<span style={{ color: "#CA27C9" }}> rent one parking lot</span> near
 					the event's location!
 				</p>
 				<p style={{ color: "white", textAlign: "center" }}>
 					Remember to drive responsibly.
 				</p>
-				<button
-					className="btn btn-primary"
-					onClick={handleButtonClick}
-					style={{
-						backgroundColor: "#FFD400",
-						color: "white",
-						padding: "10px 20px",
-						border: "none",
-						borderRadius: "5px",
-						marginTop: "20px",
-						display: "block",
-						marginLeft: "auto",
-						marginRight: "auto",
-					}}
+
+				<Link
+					to="/events"
+					className="btn principal-button"
+					style={{ backgroundColor: "purple" }}
 				>
-					TAKE ME HOME
-				</button>
+					Go to my events!
+				</Link>
 			</div>
 		</div>
 	);

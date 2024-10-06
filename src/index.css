@@ -89,6 +89,24 @@ button:focus-visible {
 	color: #fff !important;
 }
 
+.secondary-button {
+	padding: 10px 20px;
+	font-size: 1rem;
+	background-color: #ffd400;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	color: #000 !important;
+	font-weight: 700 !important;
+	letter-spacing: 1px;
+}
+
+.secondary-button:hover {
+	background-color: #cdbb33;
+	color: #090202 !important;
+}
+
 input {
 	padding: 8px;
 	margin-bottom: 15px;
@@ -125,7 +143,6 @@ input::placeholder {
 .main-container {
 	display: flex;
 	justify-content: center;
-	background-color: chartreuse;
 	background: url("../public/bg.jpeg") no-repeat fixed;
 	background-size: cover;
 }
