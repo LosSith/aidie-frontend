@@ -1,20 +1,21 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { AppContext } from "../Contexto/AppContext";
 import CardEvent from "../CardEvent/CardEvent";
 
 const Events = () => {
 	const { seeEvents, events, token } = useContext(AppContext);
-	//TRAIGO EL TOKEN DE  LOCALSTORAGE
-	const tokenLocalStorage = localStorage.getItem("token");
-	console.log("tokenLocalStorage", tokenLocalStorage);
+
+	const [tokens, setTokens] = useState(
+		localStorage.getItem("token") ? localStorage.getItem("token") : null
+	);
 
 	useEffect(() => {
-		if (token) {
+		if (tokens) {
 			seeEvents(); // Llama a la función para obtener eventos si el token está presente
 		} else {
 			console.error("No se encontró el token de autenticación.");
 		}
-	}, [seeEvents, token]);
+	}, [seeEvents, tokens]);
 
 	return (
 		<div>
@@ -28,4 +29,4 @@ const Events = () => {
 	);
 };
 
-export default Events; // Asegúrate de que esta línea esté presente
+export default Events;

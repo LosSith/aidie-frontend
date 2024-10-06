@@ -48,19 +48,33 @@ export const AppProvider = ({ children }) => {
 		setUserSession({ email: "", nombre: "" });
 	};
 
-	const seeEvents = async () => {
+	/* 	const seeEvents = useCallback(async () => {
 		try {
 			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events`, {
 				headers: {
-					Authorization: `Bearer ${token}`, // Asegúrate de que el token esté definido
+					Authorization: `Bearer ${token}`,
+				},
+			});
+			return response.data;
+		} catch (error) {
+			console.error("Error fetching seeEvents:", error);
+			throw error;
+		}
+	}, [token]);
+ */
+	const seeEvents = useCallback(async () => {
+		try {
+			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events`, {
+				headers: {
+					Authorization: `Bearer ${token}`, // Asegúrate de que el token se esté enviando
 				},
 			});
 			setEvents(response.data); // Almacena los eventos en el estado
 			console.log("Eventos recibidos:", response.data); // Muestra los eventos en la consola
 		} catch (error) {
-			console.error("Error al obtener eventos:", error);
+			console.error("Error fetching seeEvents:", error);
 		}
-	};
+	}, [token]);
 
 	return (
 		<AppContext.Provider
