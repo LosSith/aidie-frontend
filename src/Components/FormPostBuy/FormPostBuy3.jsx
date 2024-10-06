@@ -26,7 +26,11 @@ const FormPostBuy3 = () => {
 				>
 					If you don't know{" "}
 					<span style={{ color: "#CA27C9" }}>where to park</span>, we recommend
-					you to use <span style={{ color: "yellow" }}>this app</span> and
+					you to use{" "}
+					<a href="https://santiago.wesmartpark.com/cl" target="_blank">
+						<span style={{ color: "yellow" }}>this app</span>
+					</a>{" "}
+					and
 					<span style={{ color: "#CA27C9" }}> rent one parking lot</span> near
 					the event's location!
 				</p>
