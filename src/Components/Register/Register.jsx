@@ -8,15 +8,14 @@ const Register = () => {
   const { handleRegisterSubmit } = useContext(AppContext); // Extraemos la función del contexto
   const [formData, setFormData] = useState({
     name: '',
-    lastName: '',
+    lastdame: '',
     email: '',
-    birthDate: '',
+    birthdate: '',
     password: '',
-    repeatPassword: '', // Asegúrate de validar que las contraseñas coincidan
+    repeatpassword: '', // Asegúrate de validar que las contraseñas coincidan
     address: '',
     region: '',
     commune: '',
-    id: '',
   });
 
   const [step, setStep] = useState(1);
@@ -76,7 +75,7 @@ const Register = () => {
                 className="input"
                 type="text"
                 name="lastName"
-                value={formData.lastName}
+                value={formData.address}
                 onChange={handleChange}
                 placeholder="Last Name"
               />
@@ -100,7 +99,7 @@ const Register = () => {
                 className="input"
                 type="password"
                 name="repeatPassword"
-                value={formData.repeatPassword}
+                value={formData.repeatpassword}
                 onChange={handleChange}
                 placeholder="Repeat Password"
               />
@@ -116,7 +115,7 @@ const Register = () => {
                 className="input"
                 type="date"
                 name="birthDate"
-                value={formData.birthDate}
+                value={formData.birthdate}
                 onChange={handleChange}
                 placeholder="Birth Date"
               />
