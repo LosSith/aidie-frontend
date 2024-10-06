@@ -1,14 +1,3 @@
-body,
-html {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-#root {
-	height: 100%;
-}
-
 .home {
 	min-height: 100vh;
 	background-color: #f0f0f0; /* Light gray background */
@@ -39,7 +28,7 @@ p {
 }
 
 img.main-logo {
-	width: 100%;
+	width: 200px;
 }
 
 /* 
@@ -71,9 +60,5 @@ img.main-logo {
 	.cta-button {
 		font-size: 1.2rem;
 		padding: 12px 24px;
-	}
-
-	img.main-logo {
-		width: 200px;
 	}
 }
