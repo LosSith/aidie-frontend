@@ -9,6 +9,8 @@ import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import { AppProvider } from "../src/Components/Contexto/AppContext";
 import WhoIsAidie from "./Components/WhoIsAidie/WhoIsAidie";
+import UserProfile from "./Components/UsersProfile/UsersProfile";
+import FormPostBuy from "./Components/FormPostBuy/FormPostBuy";
 console.log("main.jsx is running");
 
 const router = createBrowserRouter([
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
 			{
 				path: "login",
 				element: <Login />,
+			},
+			{
+				path: "profile",
+				element: <UserProfile />,
+			},
+			{
+				path: "post.buy1",
+				element: <FormPostBuy />,
 			},
 		],
 	},
