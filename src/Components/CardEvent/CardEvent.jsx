@@ -21,16 +21,18 @@ const event = {
 	userFavorite: true,
 };
 
-const [isFavorite, setIsFavorite] = useState(event.userFavorite);
-
-const handleFavoriteChange = () => {
-	console.log("Favorite changed");
-	event.userFavorite = !event.userFavorite;
-	console.log(event.userFavorite);
-	setIsFavorite(event.userFavorite);
-};
-
 const CardEvent = () => {
+	console.log("event.userFavorite", event.userFavorite);
+	const [isFavorite, setIsFavorite] = useState(event.userFavorite);
+
+	const handleFavoriteChange = () => {
+		console.log("Favorite changed");
+		event.userFavorite = !event.userFavorite;
+		console.log("event.userFavorite", event.userFavorite);
+		setIsFavorite(event.userFavorite);
+		console.log("isFavorite", isFavorite);
+	};
+
 	return (
 		<article className="card-event">
 			<img src={event.imageUrl} alt={event.name} className="event-image" />
