@@ -1,4 +1,3 @@
-// Dentro de AppContext
 import { createContext, useState, useCallback } from "react";
 import axios from "axios";
 const { VITE_SERVER_URL_LOCAL } = import.meta.env;
@@ -50,13 +49,13 @@ export const AppProvider = ({ children }) => {
 
 	const seeEvents = useCallback(async () => {
 		try {
-			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events`, {
+			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/user/id`, {
 				headers: {
-					Authorization: `Bearer ${token}`, // Asegúrate de que el token se esté enviando
+					Authorization: `Bearer ${token}`,
 				},
 			});
-			setEvents(response.data); // Almacena los eventos en el estado
-			console.log("Eventos recibidos:", response.data); // Muestra los eventos en la consola
+			setEvents(response.data);
+			console.log("Eventos recibidos:", response.data);
 		} catch (error) {
 			console.error("Error fetching seeEvents:", error);
 		}
@@ -66,13 +65,13 @@ export const AppProvider = ({ children }) => {
 		try {
 			const response = await axios.get(`${VITE_SERVER_URL_LOCAL}/events/like`, {
 				headers: {
-					Authorization: `Bearer ${token}`, // Asegúrate de que el token se esté enviando
+					Authorization: `Bearer ${token}`,
 				},
 			});
-			setInterestedEvents(response.data); // Almacena los eventos en el estado
-			console.log("Eventos interesados recibidos:", response.data); // Muestra los eventos en la consola
+			setInterestedEvents(response.data);
+			console.log("Eventos interesados recibidos:", response.data);
 		} catch (error) {
-			console.error("Error fetching seeEvents:", error);
+			console.error("Error fetching seeInterestedEvents:", error);
 		}
 	}, [token]);
 
@@ -89,7 +88,8 @@ export const AppProvider = ({ children }) => {
 				handleRegisterSubmit,
 				seeEvents,
 				events,
-				seeInterestedEvents
+				seeInterestedEvents,
+				interestedEvents
 			}}
 		>
 			{children}
