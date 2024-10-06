@@ -44,7 +44,7 @@ const Login = () => {
       navigate("/events"); // Redirigir a la página de eventos tras el login exitoso
     } catch (error) {
       console.error("Error en el login:", error);
-      window.alert("Error al iniciar sesión. Verifique sus credenciales.");
+      window.alert("Failed to log in. Verify your credentials.");
     }
   };
 

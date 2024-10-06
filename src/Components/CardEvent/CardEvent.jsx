@@ -1,6 +1,5 @@
-import React from "react";
 import "./CardEvent.css";
-import { AppContext } from "../Contexto/AppContext";
+// import { AppContext } from "../Contexto/AppContext";
 import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
@@ -22,13 +21,10 @@ const event = {
 };
 
 const CardEvent = () => {
-	console.log("event.userFavorite", event.userFavorite);
 	const [isFavorite, setIsFavorite] = useState(event.userFavorite);
 
 	const handleFavoriteChange = () => {
-		console.log("Favorite changed");
 		event.userFavorite = !event.userFavorite;
-		console.log("event.userFavorite", event.userFavorite);
 		setIsFavorite(event.userFavorite);
 		console.log("isFavorite", isFavorite);
 	};
