@@ -15,11 +15,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .aidie-large {
-    max-width: 200px;
+    max-width: 300px;
     height: auto;
 }
 
