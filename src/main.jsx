@@ -28,6 +28,7 @@ const router = createBrowserRouter([
 				path: "events",
 				element: <Events />,
 			},
+
 			{
 				path: "who-is-aidie",
 				element: <WhoIsAidie />,

@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
   const [token, setToken] = useState(
     localStorage.getItem("token") ? localStorage.getItem("token") : null
   );
- 
+
   const logIn = async (userData) => {
     const tokenJson = await axios.post(
       `${VITE_SERVER_URL_LOCAL}/users/login`,
@@ -27,16 +27,24 @@ export const AppProvider = ({ children }) => {
     const { token } = tokenJson.data;
     return token;
   };
- 
- const logOut = () => {
+
+  const handleRegisterSubmit = async (userData) => {
+    try {
+      await axios.post(`${VITE_SERVER_URL_LOCAL}/users/register`, userData);
+      window.alert("Successfully registered user.");
+    } catch (error) {
+      console.error("Register error:", error);
+      throw new Error("Error registering user. Check the data.");
+    }
+  };
+
+  const logOut = () => {
     setisLoggedIn(false);
     localStorage.removeItem("token");
     localStorage.removeItem("session");
     setToken(null);
     setUserSession({ email: "", nombre: "" });
-   
   };
-
 
   return (
     <AppContext.Provider
@@ -48,6 +56,7 @@ export const AppProvider = ({ children }) => {
         setUserSession,
         setisLoggedIn,
         setToken,
+        handleRegisterSubmit,
       }}
     >
       {children}

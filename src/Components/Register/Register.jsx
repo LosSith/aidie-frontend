@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './register.css';
 import backgroundImage from '../../../public/bg.jpeg';
+import { AppContext } from '../Contexto/AppContext'; // Asegúrate de tener la ruta correcta
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 
 const Register = () => {
+  const { handleRegisterSubmit } = useContext(AppContext); // Extraemos la función del contexto
   const [formData, setFormData] = useState({
     name: '',
     lastName: '',
     email: '',
     birthDate: '',
     password: '',
+    repeatPassword: '', // Asegúrate de validar que las contraseñas coincidan
     address: '',
     region: '',
     commune: '',
@@ -16,6 +20,7 @@ const Register = () => {
   });
 
   const [step, setStep] = useState(1);
+  const navigate = useNavigate(); // Inicializa el hook useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,9 +30,22 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  // Modificamos handleSubmit para usar la función de registro del contexto y redirigir
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+
+    if (formData.password !== formData.repeatPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      await handleRegisterSubmit(formData); // Llamamos a la función de registro
+      console.log('User successfully registered');
+      navigate('/login'); // Redirigimos a la página de login
+    } catch (error) {
+      console.error("Error during registration:", error);
+    }
   };
 
   const handleNextStep = () => {
