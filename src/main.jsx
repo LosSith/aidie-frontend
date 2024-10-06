@@ -9,6 +9,10 @@ import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import { AppProvider } from "../src/Components/Contexto/AppContext";
 import WhoIsAidie from "./Components/WhoIsAidie/WhoIsAidie";
+import UserProfile from "./Components/UsersProfile/UsersProfile";
+import FormPostBuy from "./Components/FormPostBuy/FormPostBuy";
+import FormPostBuy2 from "./Components/FormPostBuy/FormPostBuy2";
+import FormPostBuy3 from "./Components/FormPostBuy/FormPostBuy3";
 console.log("main.jsx is running");
 
 const router = createBrowserRouter([
@@ -35,6 +39,22 @@ const router = createBrowserRouter([
 			{
 				path: "login",
 				element: <Login />,
+			},
+			{
+				path: "profile",
+				element: <UserProfile />,
+			},
+			{
+				path: "post.buy",
+				element: <FormPostBuy />,
+			},
+			{
+				path: "post.buy2",
+				element: <FormPostBuy2 />,
+			},
+			{
+				path: "post.buy3",
+				element: <FormPostBuy3 />,
 			},
 		],
 	},
